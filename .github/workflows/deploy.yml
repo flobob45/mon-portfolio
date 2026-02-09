@@ -91,7 +91,7 @@ jobs:
 
             # Vérifier que les balises importantes sont fermées
             for tag in html head body main header footer nav section; do
-              open_count=$(grep -o "<$tag" "$file" | wc -l)
+              open_count=$(grep -oE "<$tag[ >]" "$file" | wc -l)
               close_count=$(grep -o "</$tag>" "$file" | wc -l)
               if [ "$open_count" -ne "$close_count" ]; then
                 echo "❌ Erreur dans $file: balise <$tag> non équilibrée ($open_count ouvertes, $close_count fermées)"
