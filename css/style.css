@@ -53,6 +53,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--header-height) + 2rem);
 }
 
 /* --- Reset --- */
@@ -765,10 +766,18 @@ section {
   .nav-links {
     display: flex;
     position: static;
+    padding: 0;
     background: none;
     backdrop-filter: none;
     flex-direction: row;
+    align-items: center;
     gap: var(--spacing-lg);
+    width: auto;
+  }
+
+  .nav-links li {
+    width: auto;
+    text-align: left;
   }
 
   .nav-links a {
