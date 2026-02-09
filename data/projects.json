@@ -1,7 +1,7 @@
 [
   {
     "name": "mon-portfolio",
-    "description": "Site portfolio statique (HTML, CSS, JS) — Florian BOURGOIN",
+    "description": "Site portfolio. Design minimaliste et responsive.",
     "languages": ["HTML", "CSS", "JavaScript"],
     "url": "https://github.com/flobob45/mon-portfolio",
     "visibility": "public",
@@ -9,10 +9,26 @@
   },
   {
     "name": "techan",
-    "description": "Technical Analysis Library for Golang",
+    "description": "Trading Technical Analysis Library for Golang",
     "languages": ["Go", "Shell", "Makefile"],
     "url": "https://github.com/flobob45/techan",
     "visibility": "public",
+    "stars": 0
+  },
+  {
+    "name": "go-trading",
+    "description": "Real-time trading algorithm - production running...",
+    "languages": ["CLI","Go", "Rest.Websocket API", "Capital.com"],
+    "url": "https://github.com/flobob45/go-trading",
+    "visibility": "private",
+    "stars": 0
+  },
+  {
+    "name": "ai-trading",
+    "description": "Entrainement et Inférence de modèles pour le trading par IA",
+    "languages": ["AI", "Machine Learning", "Python", "TensorFlow", "PyTorch"],
+    "url": "https://github.com/flobob45/ai-trading",
+    "visibility": "private",
     "stars": 0
   }
 ]
