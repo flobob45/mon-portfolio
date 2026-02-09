@@ -218,24 +218,38 @@ section {
 .nav-links {
   display: none;
   position: fixed;
-  inset: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0;
+  padding-top: calc(var(--header-height) + 4rem);
+  margin: 0;
   background-color: var(--color-nav-overlay);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  gap: var(--spacing-xl);
-  z-index: 105;
+  gap: 2.5rem;
+  z-index: 120;
 }
 
 .nav-links.is-open {
   display: flex;
 }
 
+.nav-links li {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
 .nav-links a {
   font-size: var(--font-size-xl);
   font-weight: 600;
+  display: block;
+  width: 100%;
 }
 
 .nav-links a:hover {
