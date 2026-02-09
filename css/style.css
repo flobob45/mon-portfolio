@@ -486,6 +486,72 @@ section {
   display: block;
 }
 
+/* --- Contact Success Message --- */
+.contact-success {
+  display: none;
+  text-align: center;
+  padding: var(--spacing-xl) 0;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.contact-success.is-visible {
+  display: block;
+  opacity: 1;
+}
+
+.contact-success__icon {
+  width: 64px;
+  height: 64px;
+  color: #4ade80;
+  stroke-width: 2;
+  margin: 0 auto var(--spacing-lg);
+}
+
+.contact-success h3 {
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--spacing-md);
+}
+
+.contact-success p {
+  font-size: var(--font-size-base);
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* --- Button Loading State --- */
+.btn.is-loading {
+  position: relative;
+  color: transparent;
+  pointer-events: none;
+}
+
+.btn.is-loading::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 16px;
+  height: 16px;
+  margin: -8px 0 0 -8px;
+  border: 2px solid currentColor;
+  border-right-color: transparent;
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+  color: var(--color-text);
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.contact-form.is-hidden {
+  display: none;
+}
+
 /* --- Thank You Page --- */
 .thank-you {
   min-height: calc(100vh - var(--header-height) - 200px);

@@ -123,3 +123,50 @@ function observeSections() {
 }
 
 observeSections();
+
+/* --- Contact Form (AJAX) --- */
+const contactForm = document.querySelector('.contact-form');
+const contactSuccess = document.querySelector('.contact-success');
+
+if (contactForm && contactSuccess) {
+  contactForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const submitButton = contactForm.querySelector('button[type="submit"]');
+    const formData = new FormData(contactForm);
+
+    // Ajouter le sujet personnalisé
+    formData.append('_subject', 'Nouveau message depuis le portfolio');
+
+    // État loading
+    submitButton.classList.add('is-loading');
+    submitButton.disabled = true;
+
+    try {
+      const response = await fetch(contactForm.action, {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        // Succès : cacher le formulaire et afficher le message
+        contactForm.classList.add('is-hidden');
+        contactSuccess.classList.add('is-visible');
+
+        // Scroll vers le message de succès
+        contactSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      } else {
+        // Erreur serveur
+        throw new Error('Erreur lors de l\'envoi du message');
+      }
+    } catch (error) {
+      // Erreur réseau ou autre
+      alert('Une erreur est survenue. Veuillez réessayer plus tard.');
+      submitButton.classList.remove('is-loading');
+      submitButton.disabled = false;
+    }
+  });
+}
