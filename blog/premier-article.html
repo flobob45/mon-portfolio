@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Comment j'ai construit mon portfolio avec Claude Code, un outil d'IA pour le développement.">
+  <meta name="author" content="Florian BOURGOIN">
+  <link rel="canonical" href="https://flobob45.github.io/mon-portfolio/blog/premier-article.html">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Construire un portfolio avec Claude Code">
+  <meta property="og:description" content="Comment j'ai construit mon portfolio avec Claude Code, un outil d'IA pour le développement.">
+  <meta property="og:url" content="https://flobob45.github.io/mon-portfolio/blog/premier-article.html">
+  <meta property="og:image" content="https://flobob45.github.io/mon-portfolio/assets/images/photo.jpg">
+  <title>Construire un portfolio avec Claude Code — Blog — Florian BOURGOIN</title>
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root{--color-bg:#0a0a0a;--color-text:#e0e0e0;--color-header-bg:rgba(10,10,10,.8);--color-header-border:rgba(255,255,255,.06);--header-height:60px;--font-family:"Inter",sans-serif}
+    [data-theme="light"]{--color-bg:#fff;--color-text:#1a1a1a;--color-header-bg:rgba(255,255,255,.8);--color-header-border:rgba(0,0,0,.06)}
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+    body{padding-top:var(--header-height);font-family:var(--font-family);color:var(--color-text);background-color:var(--color-bg)}
+    .site-header{position:fixed;top:0;left:0;width:100%;background-color:var(--color-header-bg);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--color-header-border);z-index:100}
+  </style>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
+  <header class="site-header">
+    <nav class="nav">
+      <a href="../index.html" class="nav-logo">Florian Bourgoin</a>
+      <button class="theme-toggle" aria-label="Changer de thème">
+        <svg class="theme-toggle__icon theme-toggle__icon--moon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+        <svg class="theme-toggle__icon theme-toggle__icon--sun" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="5"/>
+          <line x1="12" y1="1" x2="12" y2="3"/>
+          <line x1="12" y1="21" x2="12" y2="23"/>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+          <line x1="1" y1="12" x2="3" y2="12"/>
+          <line x1="21" y1="12" x2="23" y2="12"/>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+      </button>
+      <button class="nav-hamburger" aria-label="Ouvrir le menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="../index.html#about">À propos</a></li>
+        <li><a href="../index.html#projects">Projets</a></li>
+        <li><a href="../index.html#blog" class="is-active">Blog</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <article class="blog-article">
+      <header class="blog-article__header">
+        <div class="meta blog-article__meta">
+          <time datetime="2026-02-08">8 février 2026</time>
+          <span class="badge blog-article__category">IA</span>
+          <span class="badge blog-article__category">Claude Code</span>
+        </div>
+        <h1 class="blog-article__title">Construire un portfolio avec Claude Code</h1>
+      </header>
+
+      <div class="blog-article__content">
+        <p>
+          Quand j'ai décidé de créer mon portfolio, je voulais quelque chose de simple :
+          du HTML, du CSS et du JavaScript vanilla. Pas de framework, pas de bundler,
+          juste les fondamentaux. Et pour m'accompagner dans cette démarche, j'ai utilisé
+          Claude Code.
+        </p>
+
+        <h2>Pourquoi un site statique ?</h2>
+        <p>
+          Les frameworks modernes sont puissants, mais pour un portfolio personnel,
+          ils ajoutent une complexité inutile. Un site statique se déploie partout,
+          se charge instantanément et ne nécessite aucune maintenance serveur.
+        </p>
+
+        <blockquote>
+          La simplicité est la sophistication suprême. — Léonard de Vinci
+        </blockquote>
+
+        <h2>Le rôle de l'IA dans le processus</h2>
+        <p>
+          Claude Code m'a aidé à structurer le projet dès le départ : architecture des
+          fichiers, conventions de nommage, CSS custom properties pour la cohérence visuelle.
+          Chaque décision de design a été discutée et itérée.
+        </p>
+
+        <h3>Ce que j'ai appris</h3>
+        <ul>
+          <li>L'importance du <code>mobile-first</code> dans le design CSS</li>
+          <li>L'utilisation des CSS custom properties pour un thème maintenable</li>
+          <li>Comment structurer du JavaScript vanilla proprement</li>
+          <li>L'accessibilité avec les attributs <code>aria-*</code></li>
+        </ul>
+
+        <h2>Prochaines étapes</h2>
+        <p>
+          Ce portfolio va continuer d'évoluer. J'y ajouterai mes futurs projets
+          et des articles sur mes apprentissages en DevOps et en intelligence artificielle.
+        </p>
+      </div>
+
+      <a href="./" class="blog-article__back">&larr; Retour au blog</a>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Florian BOURGOIN</p>
+    <nav aria-label="Liens sociaux">
+      <ul class="footer-links">
+        <li><a href="https://github.com/flobob45" target="_blank" rel="noopener">GitHub<span class="sr-only"> (ouvre dans un nouvel onglet)</span></a></li>
+        <li><a href="https://www.linkedin.com/in/florian-bourgoin-33162a311" target="_blank" rel="noopener">LinkedIn<span class="sr-only"> (ouvre dans un nouvel onglet)</span></a></li>
+      </ul>
+    </nav>
+    <p class="footer-credit">Construit avec Claude Code</p>
+  </footer>
+
+  <script src="../js/main.js" defer></script>
+</body>
+</html>
