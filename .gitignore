@@ -9,3 +9,6 @@ node_modules/
 .env
 CLAUDE.local.md
 *.local.json
+
+# Rapports d'audit
+reports/
