@@ -485,6 +485,47 @@ section {
   display: block;
 }
 
+/* --- Thank You Page --- */
+.thank-you {
+  min-height: calc(100vh - var(--header-height) - 200px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-xl) var(--spacing-md);
+}
+
+.thank-you__content {
+  max-width: 600px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-lg);
+}
+
+.thank-you__icon {
+  width: 80px;
+  height: 80px;
+  color: #4ade80;
+  stroke-width: 2;
+}
+
+.thank-you h1 {
+  font-size: var(--font-size-xxl);
+  margin: 0;
+}
+
+.thank-you__message {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.thank-you .btn {
+  margin-top: var(--spacing-md);
+}
+
 /* --- Footer --- */
 .site-footer {
   text-align: center;
