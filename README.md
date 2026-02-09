@@ -1,8 +1,10 @@
 # mon-portfolio
 
-Site portfolio statique de Florian BOURGOIN — DevOps Engineer & AI studying.
+Site portfolio statique :
+https://flobob45.github.io/mon-portfolio/
 
 Construit avec HTML, CSS et JavaScript vanilla.
+
 
 ## Lancer en local
 
