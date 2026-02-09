@@ -289,18 +289,32 @@ section {
 
 /* --- Button --- */
 .btn {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   margin-top: var(--spacing-lg);
   padding: var(--spacing-sm) var(--spacing-lg);
   background-color: var(--color-accent);
   color: #ffffff;
   font-weight: 600;
   border-radius: var(--border-radius);
-  transition: background-color 0.2s;
+  transition: background-color 0.2s, border-color 0.2s;
+  text-decoration: none;
 }
 
 .btn:hover {
   background-color: var(--color-accent-hover);
+}
+
+.btn--secondary {
+  background-color: transparent;
+  color: var(--color-text);
+  border: 2px solid var(--color-border);
+}
+
+.btn--secondary:hover {
+  border-color: var(--color-accent);
+  background-color: transparent;
 }
 
 /* --- About --- */
@@ -378,6 +392,72 @@ section {
   margin-bottom: var(--spacing-sm);
   font-size: var(--font-size-sm);
   color: var(--color-text-muted);
+}
+
+/* --- Curriculum Section --- */
+.curriculum-card-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-lg);
+}
+
+.curriculum-card__link {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  color: inherit;
+  text-decoration: none;
+}
+
+.curriculum-meta {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-sm);
+}
+
+.curriculum-experience {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+}
+
+.curriculum-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+}
+
+.curriculum-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-sm);
+}
+
+.highlight {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+}
+
+.highlight__icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+@media (min-width: 768px) {
+  .curriculum-card-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .curriculum-card-wrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 /* --- Projects --- */
